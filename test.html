@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Раскрывающийся по клику блок с контентом на CSS</title>
+		<style>
+			#press {display: none;}
+			.block {
+				background: #fff;
+				border: 1px solid black;
+				text-align: center;
+				width: 200px;
+				z-index: 1;
+			}
+			.spoiler > .block {display: none; position: absolute;}
+			.spoiler > input:checked + .block {display: block;}
+			label {color: blue; font-size: 1.5em;}
+			label:hover {cursor: pointer; text-decoration: underline;}
+		</style>
+	</head>
+	<body>
+		<h1>Раскрывающийся по клику блок с контентом на CSS</h1>
+		<label for="press">Раскрыть</label>
+		<div class="spoiler">
+			<input type="checkbox" id="press">
+			<div class="block">
+				Hello, World!
+				<br>
+				<img src="/images/blog/63/hello-world.png" alt="Hello, World!">
+				<br>
+				Hello, World!
+			</div>
+		</div>
+	</body>
+</html>

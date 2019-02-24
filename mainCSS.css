@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html { overflow-x:  hidden; }
+
+body {
+	margin: auto;
+	background-image: url('img/background.0fbd2ed7.jpg');
+	background-size: 100%;
+	background-position: 50% 50%;
+	
+}
+.upBox {
+	border: 1px solid #1E90FF;
+	width: 100%;
+	heigh: 319px;
+	background: #1E90FF;
+	color: white;
+	text-align: center;
+	font-family: 'Cinzel', serif;
+}
+.upFirst {
+	border: 1px solid #1E90FF;
+	width: 100%;
+	heigth: 110px;
+} 
+.upSecond {
+	border: 1px solid #1E90FF;
+	width: 100%;
+	heigth: 74px;
+}
+.upThird {
+	border: 1px solid #1E90FF;
+	width: 100%;
+	heigth: 135px;
+}
+.upThird img {
+	vertical-align: middle;
+}
+.imgHeader {
+	width: 8vw;
+	height: 8vw;
+}
+.middleBox {
+	
+	background: #1E90FF;
+	width: 100%;
+	height: 70%;
+}
+.middleImg {
+	width: 50%;
+	margin-left: 25%;
+	float: left;
+}
+.mImg {
+	background: #1E90FF;
+	width: 50vw;
+	display: block;
+}
+.store {
+	width: 20%;
+	float: right;
+	margin-right: 25px;
+}
+.store img {
+	width: 100%;
+	padding-right: 25px;
+}
+.appStore {
+	margin-bottom: 10px;
+}
+h1 {
+	font-size: 6vw;
+}
+h3 {
+	font-size: 4vw;
+}
+h4 {
+	font-size: 3vw;
+}	
+h1, 
+h3,
+h4 {
+	font-weight: 600;
+	padding: 0;
+	margin: 0;
+}
+.emptySpace {
+	/* position: relative; */
+	background: transparent;
+	width: 0; 
+	height: 0;
+	border-top: 100px solid #1E90FF;
+	border-left: 0px solid transparent;
+	border-left-width: 1920px;
+	clear: both;
+}
+/* .emptySpace:after { */
+	/* position: absolute; */
+	/* content: ''; */
+	/* width: 0; */
+	/* height: 0; */
+	/* border-top: 50px solid #1E90FF; */
+	/* border-right: 100vw solid transparent; */
+	/* /* border-left: 100px solid transparent; */ */
+	/* /* border-bottom: 0px solid transparent; */ */
+	/* /* border-top: 50px solid transparent; */ */
+	/* /* border-width: 0 100vw 20px 0; */ */
+	/* /* border-color: transparent rgba(0,0,0,0.4) transparent transparent; */ */
+/* } */
+	
+.chooseBox {
+	background: transparent;
+	text-align: center;
+}	
+.choose {
+	float: left;
+	background: transparent;
+	width: 33%;
+	text-align: center;
+}
+.chooseBox img {
+	width: 50%;
+}
+p {
+	margin-top: 5%;
+	color: white;
+	font-size: 2vw;
+	font-family: 'Cinzel', serif;
+}
+
+.emptySpace2 {
+	
+	background: transparent;
+	width: 0; 
+	height: 0;
+	border-bottom: 100px solid #1E90FF;
+	border-left: 0 solid transparent;
+	border-left-width: 1920px;
+	clear: both;
+}
+.features {
+	background: #1E90FF;
+	width: 100%;
+	height: 10%;
+	text-align: center;
+}
+.featureText {
+	font-size: 3vw;
+	font-family: 'Cinzel', serif;
+	color: white;
+}
+.featureBox {
+	background: #1E90FF; 
+	width: 100%;
+	height: 350px;
+	text-align: center;
+	
+}
+.featureImg {
+	background: inherit;
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+.featureImg img {
+	width: 50%;
+}
+
+
+.connect {
+	padding-top: 200px;
+	width: 100%;
+	height: 100px;
+	background:#1E90FF;
+	clear: both;
+	text-align: center;
+}
+.connect button {
+	width: 25%;
+	height: 50%;
+	border-radius: 15px;
+	background: white;
+	font-family: 'Cinzel', serif;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modalContent {
+    position: relative;
+    background-color: #B0C4DE;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalHeader {
+    padding: 2px 16px;
+    color: white;
+}
+.modalBody {
+	margin-top: 20px;
+	padding: 2px 16px;
+	text-align: left;
+	color: white;
+	font-family: 'Cinzel', serif;
+}
+.modalBody input {
+	border: 1px solid #40E0D0;
+	border-radius: 5px;
+	height: 30px;
+}
+.inputComment {
+	resize: none;
+}
+.modalFooter {
+    padding: 2px 16px;
+	height: 60px;
+    color: white;
+}
+.modalFooter input {
+	width: 40px;
+	height: 20px;
+	
+}
+
+.spoiler {
+	width: 100%;
+	/* height: 160px; */
+	background: gray;
+	text-align: center;
+	color: white;
+	clear: both;
+	margin: 0;
+}
+.infoBlock {
+	/* display: none; */
+	visibility: hidden;
+	height: 0;
+	transition: height .5s linear;
+}
+.spoiler p {
+	font-family: 'Cinzel', serif;
+	font-size: 14px;
+	max-width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	/* display: none; */
+	transition-delay: 0.2s;
+	
+}
+.spoiler label {
+	cursor: pointer;
+}	
+.spoiler input {
+	display: none;
+}
+.spoiler input:checked  + .infoBlock{
+	/* display: block; */
+	height: 150px;
+	
+	visibility: visible;
+}
+
+.twoButtons {
+	width: 100%;
+	height: 150px;
+	background: #1E90FF;
+	text-align: center;
+	
+}
+.firstButton button {
+	width: 350px;
+	height: 74px;
+	background: transparent;
+	border: 2px solid white;
+	color: white;
+	font-family: 'Cinzel', serif;
+}
+.secondButton button {
+	width: 350px;
+	height: 74px;
+	background: transparent;
+	border: 2px solid white;
+	color: white;
+	font-family: 'Cinzel', serif;
+}
+.firstButton {
+	display: inline-block;
+	margin-top: 25px;
+	
+	
+}
+.secondButton {
+	display: inline-block;
+	margin-left: 80px;
+}
+footer {
+	background: #1E90FF;
+	width: 100%;
+	height: 100px;
+	color: white;
+	clear: both;
+}
+.footImg {
+	margin-left: 10%;
+	width: 50%;
+}
+.imgFooter {
+	width: 50px;
+	height: 50px;
+	
+}
+.footImg, .footImg2 {
+	float: left;
+}
+.footImg2 {
+	margin-left: 15%;
+}
+.footImg2 img{
+	padding-right: 40px;
+	
+}
+.footImg img {
+	vertical-align: middle;
+}
+.TM {
+	width: 150px;
+    margin-top: 10px;
+    padding-right: 250px;
+	float: right;
+}
+footer a {
+	color: white;
+	text-decoration: none;
+}
+
