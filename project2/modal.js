@@ -1,40 +1,53 @@
-
-
-let money = prompt("Ваш бюджет на месяц?", ""),
+let money = +prompt("Ваш бюджет на месяц?", ""),
     time = prompt("Введите дату в формате YYYY-MM-DD", "");
 
 
-let state = prompt("Введите обязательную статью расходов в этом месяце", ""),
-    howMuch = prompt("Во сколько обойдется?", "");
+let appData = {
+    budget: money,
+    timeData: time,
+    expenses: {},
+    optionalExpenses: {},
+    income: [],
+    savings: false
+};
 
-let expenses = new Object(); 
+labelLoop: for (let i = 0; i < 2; i++) {
+    let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+        b = prompt("Во сколько обойдется?", "");
+
+if ( (typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null
+        && a != "" && b != "" && a.length < 50) {
+
+        console.log("done");     
+        appData.expenses[a] = b;
+        break;
+}   else {
+        continue labelLoop;
+}
     
-expenses.how = (state + " : " + howMuch);
+};
 
+   /* let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+        b = prompt("Во сколько обойдется?", "");
 
-let optionalExpenses = new Object();
+ while ((typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null
+                    && a != "" && b != "" && a.length < 50) {
+        console.log("done"); 
+        appData.expenses[a] = b;
 
+};*/
 
-let income = [];
+appData.moneyPerDay = appData.budget / 30;
 
+alert("Ежедневный бюджет: " + appData.moneyPerDay);
 
-let appData = new Object();
-
-appData.budget = money;
-
-appData.timeData = time;
-
-appData.expenses = expenses.how;
-
-appData.optionalExpenses = optionalExpenses;
-
-appData.income = income;
-
-appData.savings = false;
-
-console.log(appData);
-
-alert("Ваш бюджет на день: " +  money / 30);
-
-
+if (appData.moneyPerDay < 100) {
+    console.log("Минимальный уровень достатка");
+} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+    console.log("Средний уровень достатка");
+} else if (appData.moneyPerDay >= 2000) {
+    console.log("Высокий уровень достатка");
+} else {
+    console.log("Произошла ошибка");
+}
 
